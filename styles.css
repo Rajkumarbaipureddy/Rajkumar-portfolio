@@ -1,0 +1,314 @@
+body {
+    background-color: #eaeaea; /* Light grey for a clean look */
+    color: #333; /* Dark grey for text */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improved readability */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+.header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(90deg, #007acc, #005f9c); /* Professional blue gradient */
+    animation: gradient 5s ease infinite;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+@keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.content {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for content */
+    background-color: #ffffff; /* White background for content */
+    border-radius: 8px; /* Rounded corners for content */
+}
+
+h1, h2 {
+    color: #005f9c; /* Darker blue for headings */
+    margin-bottom: 15px; /* Added margin for spacing */
+}
+
+h5 {
+    color: #666; /* Grey for subheadings */
+    margin-bottom: 10px; /* Added margin for spacing */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f2f2f2; /* Light background for list items */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.3s; /* Add scale effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+li:hover {
+    background: #007acc; /* Darker blue on hover */
+    color: white; /* White text on hover */
+    transform: scale(1.03); /* Slight zoom effect */
+}
+
+.button {
+    display: inline-block;
+    margin: 20px 10px; /* Added horizontal margin for spacing */
+    padding: 10px 20px;
+    color: white;
+    background-color: #007acc; /* Professional blue for buttons */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s; /* Add scale effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for buttons */
+}
+
+.button:hover {
+    background-color: #005f9c; /* Darker blue on hover */
+    transform: scale(1.05); /* Slight zoom effect */
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 20px auto; /* Center the profile photo */
+    border: 5px solid #007acc; /* Border around the photo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for profile photo */
+}
+
+.marquee {
+    background-color: #007acc; /* Banner color */
+    color: white;
+    padding: 10px 0;
+    font-size: 1.2em;
+    white-space: nowrap;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for marquee */
+}
+
+.marquee p {
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.skills-section {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+}
+
+.skill {
+    background: #f2f2f2; /* Light background for skill boxes */
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add scale effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.skill:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Increased shadow on hover */
+}
+
+.skill img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333; /* Dark footer */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+footer a {
+    color: #007acc; /* Link color */
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+    color: #005f9c; /* Darker blue on hover */
+}
+
+.welcome-message {
+    font-size: 2.5em;
+    margin: 40px 0; /* Increased margin for spacing */
+    text-align: center;
+}
+
+.description {
+    font-size: 1.2em;
+    margin-bottom: 30px; /* Increased margin for spacing */
+    color: #555; /* Darker grey for description */
+    text-align: center;
+}
+
+.features {
+    margin-top: 30px; /* Increased margin for spacing */
+}
+
+.feature {
+    margin: 20px 0; /* Increased margin for spacing */
+    text-align: center;
+}
+
+.navigation {
+    margin-top: 40px; /* Increased margin for spacing */
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: fadeIn 1s ease; /* Fade-in animation */
+}
+/* Additional CSS for Contact Page */
+.contact {
+    padding: 20px;
+    max-width: 600px;
+    margin: 20px auto; /* Center the contact section */
+    background-color: #ffffff; /* White background for form */
+    border-radius: 8px; /* Rounded corners for form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.contact h1 {
+    text-align: center;
+    color: #005f9c; /* Header color */
+}
+
+.contact label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Border for inputs */
+    border-radius: 5px; /* Rounded corners for inputs */
+}
+
+.contact button {
+    background-color: #007acc; /* Button color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px; /* Rounded corners for button */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Button hover effect */
+}
+
+.contact button:hover {
+    background-color: #005f9c; /* Darker button on hover */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.marquee {
+    background: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 16px;
+    position: relative;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.contact {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+h1 {
+    color: #007BFF;
+}
+
+p {
+    line-height: 1.6;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #0056b3; /* Darker blue on hover */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
